@@ -486,12 +486,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835818919}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4, y: 9.5, z: 46.120003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 45, y: 9.5, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2118649212}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &835818922
 MonoBehaviour:
@@ -599,9 +599,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400066, guid: 4a7c3ad7168bb834b87a91e3f94ad3d6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1909863148}
-    - targetCorrespondingSourceObject: {fileID: 400066, guid: 4a7c3ad7168bb834b87a91e3f94ad3d6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 835818921}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100066, guid: 4a7c3ad7168bb834b87a91e3f94ad3d6, type: 3}
       insertIndex: -1
@@ -1008,6 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c03a29236ea3134db1fc40eb5fc413d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jf2: 300
   jumpForce: 699
   gravityModifier: 1.5
   isOnGround: 1
@@ -1016,6 +1014,7 @@ MonoBehaviour:
   Dirt: {fileID: 1909863146}
   jumpSound: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
   Crash: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  Dj: 0
 --- !u!65 &2118649209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1229,6 +1228,7 @@ SceneRoots:
   - {fileID: 534669905}
   - {fileID: 170076735}
   - {fileID: 2014335015}
+  - {fileID: 835818921}
   - {fileID: 1075749631}
   - {fileID: 1950032373}
   - {fileID: 205086880891390792}

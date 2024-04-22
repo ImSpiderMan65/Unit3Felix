@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody prb;
+    public float jf2 = 300f;
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip Crash;
     private AudioSource playerAudio;
+    public bool Dj = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,18 @@ public class PlayerController : MonoBehaviour
             playerAnim.SetTrigger("Jump_trig");
             Dirt.Stop();
             playerAudio.PlayOneShot(jumpSound, 1.0f);
+            Dj = true;
         }
+        else if (Input.GetKeyDown(KeyCode.Space) && Dj && !gameOver)
+        {
+            prb.AddForce(Vector3.up * jf2, ForceMode.Impulse);
+            isOnGround = false;
+            playerAnim.SetTrigger("Jump_trig");
+            Dirt.Stop();
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+            Dj = false;
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
