@@ -24,11 +24,11 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnObstacle ()
     {
-        int obstacleArray = Random.Range()
+        int obstacleArray = Random.Range(0, SpawnObstacles.Length);
 
         if (playerControllerScript.gameOver ==  false)
         {
-            Instantiate(SpawnObstacles[], spawnPos, SpawnObstacles[].transform.rotation);
+            Instantiate(SpawnObstacles[obstacleArray], spawnPos, SpawnObstacles[obstacleArray].transform.rotation);
         }
     }
 }
